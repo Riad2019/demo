@@ -17,13 +17,13 @@ function App() {
     <Router>
       <Navbar></Navbar>
        <Routes>
-        <Route path='/' exact element={Dashboard} />
-        <Route path='/business' element={Business} />
-        <Route path='/accounting' element={Accounting} />
-        <Route path='/contact-us' element={ContactUs} />
-        <Route path='/sign-up' element={SignUp} />
-        <Route path='/shortterm' element={ShortTerm} />
-        <Route path='/consulting' element={BusinessSnapshot} />
+        <Route path='/' exact element={<Dashboard/>} />
+        <Route path='/business' element={<Business/>} />
+        <Route path='/accounting' element={<Accounting/>} />
+        <Route path='/contact-us' element={<ContactUs/>} />
+        <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='/shortterm' element={<ShortTerm/>} />
+        <Route path='/businesssnapshot' element={<BusinessSnapshot/>} />
       </Routes>
     </Router>
   );
