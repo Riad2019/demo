@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import Dashboard from './components/pages/Dashboard';
+import { BrowserRouter as Router, Switch,Routes, Route } from 'react-router-dom';
+import Business from './components/pages/Business';
+import Accounting from './components/pages/Accounting';
+import ContactUs from './components/pages/ContactsUs';
+import SignUp from './components/pages/SignUp';
+import ShortTerm from './components/pages/ShortTerm';
+import BusinessSnapshot from './components/pages/BusinessSnapshot';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar></Navbar>
+       <Routes>
+        <Route path='/' exact element={Dashboard} />
+        <Route path='/business' element={Business} />
+        <Route path='/accounting' element={Accounting} />
+        <Route path='/contact-us' element={ContactUs} />
+        <Route path='/sign-up' element={SignUp} />
+        <Route path='/shortterm' element={ShortTerm} />
+        <Route path='/consulting' element={BusinessSnapshot} />
+      </Routes>
+    </Router>
   );
 }
 
